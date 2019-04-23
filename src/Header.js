@@ -11,4 +11,15 @@ const Header = function () {
     )
 }
 
+// class Header extends React.Component {
+//     render() {
+//         return (
+//             <div className="header">
+//                 Phone Directory
+//           </div>
+//         )
+//     }
+
+// }
+
 export default Header;
