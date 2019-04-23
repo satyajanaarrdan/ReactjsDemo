@@ -5,10 +5,12 @@ import './App.css';
 class App extends Component {
   render() {
     let subscribers = [{
+      id:1,
       name: "satya",
       phone: "3798379"
     },
     {
+      id:2,
       name: "satya",
       phone: "3798379"
     }]
@@ -32,9 +34,12 @@ class App extends Component {
           {
             subscribers.map(subscirber=>{
               return(
-              <div className="grid-container">
+              <div key={subscirber.id} className="grid-container">
               <span className="grid-item ">{subscirber.name}</span>
               <span className="grid-item ">{subscirber.phone}</span>
+              <span className="grid-item action-btn-container">
+                <button className="custom-btn delete-btn">Delete</button>
+              </span>
               </div> 
               )
             })
