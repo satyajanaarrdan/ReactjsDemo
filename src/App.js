@@ -4,21 +4,28 @@ import './App.css';
 
 class App extends Component {
 
+  constructor(){
+    super();
+    this.state={
+      subscriberListToShow:[]
+    }
+  }
+
   deleteHandler(message){
     alert(message);
   }
 
   render() {
-    let subscribers = [{
-      id:1,
-      name: "satya",
-      phone: "3798379"
-    },
-    {
-      id:2,
-      name: "satya",
-      phone: "3798379"
-    }]
+    // let subscribers = [{
+    //   id:1,
+    //   name: "satya",
+    //   phone: "3798379"
+    // },
+    // {
+    //   id:2,
+    //   name: "satya",
+    //   phone: "3798379"
+    // }]
 
     return (
       <div>
@@ -37,7 +44,7 @@ class App extends Component {
             <span className="grid-item phone-heading">Phone</span>
           </div>
           {
-            subscribers.map(subscirber=>{
+            this.subscriberListToShow.map(subscirber=>{
               return(
               <div key={subscirber.id} className="grid-container">
               <span className="grid-item ">{subscirber.name}</span>
