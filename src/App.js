@@ -4,8 +4,8 @@ import './App.css';
 
 class App extends Component {
 
-  deleteHandler(){
-    alert("delete is clicked");
+  deleteHandler(message){
+    alert(message);
   }
 
   render() {
@@ -43,7 +43,7 @@ class App extends Component {
               <span className="grid-item ">{subscirber.name}</span>
               <span className="grid-item ">{subscirber.phone}</span>
               <span className="grid-item action-btn-container">
-                <button className="custom-btn delete-btn" onClick={this.deleteHandler}>Delete</button>
+                <button className="custom-btn delete-btn" onClick={this.deleteHandler.bind(this,"delete click")}>Delete</button>
               </span>
               </div> 
               )
