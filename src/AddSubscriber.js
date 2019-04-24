@@ -12,6 +12,7 @@ constructor(){
         name:'',
         phone:''
     }
+    console.log(this.state);
 }
 
 inputChangedHanlder=(e)=>{
